@@ -1,0 +1,21 @@
+{"Stock":[
+			{
+			"Stock_Name":"TATA",
+			"Number_of_shares":"87",
+			"Share_Prize":"201"
+			},
+			
+			{
+			"Stock_Name":"Reliance",
+			"Number_of_shares":"92",
+			"Share_Prize":"310"
+			},
+			
+			
+			{
+			"Stock_Name":"Samsung",
+			"Number_of_shares":"74",
+			"Share_Prize":"105"
+			}
+           ]
+    }
