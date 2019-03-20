@@ -1,3 +1,12 @@
+/**********************************************************************************
+	 * Purpose:  Create a JSON file having Inventory Details for Rice, Pulses and Wheats 
+	 *           with properties name, weight, price per kg. 
+     *
+	 * @author Rahul Chaudhary
+	 * @version 1.2 
+	 * @since  18-03-2019
+	 *
+	 ******************************************************************************/
 package com.bridgelabz.oopsprograms;
 import java.io.File;
 import java.io.IOException;

@@ -1,3 +1,12 @@
+/******************************************************************************
+	 * Purpose:  This programme is used to manage a list of Doctors associated with the Clinique. 
+	 *           This also manages the list of patients who use the clinique.
+     *
+	 * @author Rahul Chaudhary
+	 * @version 1.2 
+	 * @since 18-03-2019
+	 *
+	 ******************************************************************************/
 package com.bridgelabz.oopsprograms.inventorymanager;
 import java.io.FileReader;
 import org.json.simple.JSONArray;
