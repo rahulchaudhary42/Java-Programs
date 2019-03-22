@@ -21,7 +21,6 @@ public class DeckOfCard
 		for(int i=0;i<4;i++)
 		{
 			System.out.print("player "+(i+1)+":\t");
-			
 			for(int j=0;j<9;j++)
 			{
 				System.out.print(playercard[x][y]+"\t");

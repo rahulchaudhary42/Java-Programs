@@ -14,7 +14,6 @@ import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 public class InventoryManagement 
 {
-
 	public static void getData(String readFor, String arg1, String arg2, String arg3)
 	{
 		JSONParser parser = new JSONParser();
@@ -27,7 +26,8 @@ public class InventoryManagement
 			JSONArray values = (JSONArray) jsonObject.get(readFor); //read details into json array
 			System.out.println("\n" + readFor + " details............");
 
-			for (int i = 0; i < values.size(); i++) {
+			for (int i = 0; i < values.size(); i++) 
+			{
 				//display data
 				JSONObject rice = (JSONObject) values.get(i);
 				String name = (String) rice.get(arg1);
@@ -54,3 +54,4 @@ public class InventoryManagement
 		getData("Pulses", "Pulsesname", "Weight", "Price");
 	}
 }
+

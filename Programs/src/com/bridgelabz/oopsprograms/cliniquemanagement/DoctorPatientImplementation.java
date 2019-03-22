@@ -8,8 +8,6 @@ import org.codehaus.jackson.map.ObjectMapper;
 import org.codehaus.jackson.type.TypeReference;
 import com.bridgelabz.utility.Util;
 import com.bridgelabz.utility.Utility;
- 
-
 public class DoctorPatientImplementation implements DoctorAndPatientData 
 {
 	static ObjectMapper mapper = new ObjectMapper(); //create mapper 

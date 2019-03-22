@@ -1,3 +1,13 @@
+/**********************************************************************************
+	 * Purpose:  Read in the following message: Hello <<name>>, We have your full name as
+	 *           <<full name>> in our system. your contact number is 91-xxxxxxxxxx. Please,let us 
+	 *           know in case of any clarification Thank you BridgeLabz 01/01/2016. 
+     *
+	 * @author Rahul Chaudhary
+	 * @version 1.2 
+	 * @since  20-03-2019
+	 *
+	 ******************************************************************************/
 package com.bridgelabz.oopsprograms;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -5,7 +15,6 @@ public class RegularExpression
 {
 	public static void regexExpression(String fullName, String mobile, String firstName) 
 	{
-		// your message to be displayed
 		String Message = "Hello <<name>>, We have your full name "
 				+ "as <<full name>> in our system. \nYour contact number is +91­xxxxxxxxxx. \nPlease,let us "
 				+ "know in case of any clarification.\n\t\t\t Thank you!!!\n\t\t\t BridgeLabz 01/01/2016. ";

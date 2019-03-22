@@ -35,17 +35,17 @@ public class InventoryManager
 			switch (Option) 
 			{
 			case 1:
-				System.out.println("Enter product Name:");
+				System.out.println("Enter the name of product type");
 				String name = Util.getString();
 				 
-				System.out.println("Enter product stock in kg:");
-				int number = Util.getInt();
+				System.out.println("Enter the Weight");
+				double weight = Util.getDouble();
 				 
-				System.out.println("Enter Price");
-				 int price = Util.getInt();
+				System.out.println("Enter the Price");
+				double price = Util.getDouble();
 				 
 				fact.setproductname(name);
-				fact.settotalStock(number);
+				fact.settotalStock(weight);
 				fact.setstockValue(price);
 				save(fact);
 				System.out.println("data added successfully ");

@@ -13,7 +13,6 @@ public class SortDeckOfCards
 	public static void main(String[] args)
 	{
 		String playercard[][]=Util.cardDistribute();
-
 		Queue<Queue<String>> sortedcard=Util.cardSort(playercard);
 		String playername[]= {"Player 1","Player 2","Player 3","Player 4"};
 		int index=0;

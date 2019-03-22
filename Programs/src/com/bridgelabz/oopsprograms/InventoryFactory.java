@@ -10,14 +10,14 @@ public class InventoryFactory
 		this.productname = productname;
 	}
 
-	public void settotalStock(int totalStock) 
+	public void settotalStock(double weight) 
 	{
-		this.totalStock = totalStock;
+		this.totalStock = (int) weight;
 	}
 
-	public void setstockValue(int stockValue) 
+	public void setstockValue(double price) 
 	{
-		this.stockValue = stockValue;
+		this.stockValue = (int) price;
 	}
 
 	public String getproductname() 

@@ -1,3 +1,12 @@
+/**********************************************************************************
+	 * Purpose: Write a program to read in Stock Names, Number of Share, Share Price. Print a Stock
+	 *          Report with total value of each Stock and the total value of Stock.
+     *
+	 * @author Rahul Chaudhary
+	 * @version 1.2 
+	 * @since  20-03-2019
+	 *
+	 ******************************************************************************/
 package com.bridgelabz.oopsprograms;
 import java.io.FileReader;
 import org.json.simple.JSONArray;
