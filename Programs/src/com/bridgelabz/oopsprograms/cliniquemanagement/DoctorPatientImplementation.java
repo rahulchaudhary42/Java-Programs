@@ -44,7 +44,6 @@ public class DoctorPatientImplementation implements DoctorAndPatientData
 	boolean saveflag = false;
 	boolean changeflag = false;
 	Utility input = new Utility();
-
 	public DoctorPatientImplementation() 
 	{
 
