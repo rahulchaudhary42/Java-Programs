@@ -41,7 +41,7 @@ public class CommercialLL
 					stock.printReport();
 					break;							
 				default :
-					System.out.println("Invalid Choice..!!!");
+					System.err.println("Invalid Choice..!!!");
 					break;			
 			}
 			System.out.println("Do you wants to continue...(Y/N)");

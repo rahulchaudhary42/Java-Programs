@@ -23,7 +23,6 @@ public class InventoryManager
 	public static void main(String args[]) throws Exception 
 	{
 		int Option = 0;
-		 
 		InventoryFactory fact = new InventoryFactory(); 
 		do 
 		{
@@ -61,7 +60,7 @@ public class InventoryManager
 			case 4:
 				break;
 			default:
-				System.out.println("Invalid Entry Retype");
+				System.err.println("Invalid Entry ...");
 			}
 
 		} 
@@ -70,7 +69,7 @@ public class InventoryManager
 	}
 
  
-	private static void removeData() throws JsonMappingException, IOException 
+	public static void removeData() throws JsonMappingException, IOException 
 	{
 		System.out.println("Enter product name");
 		String productName = Util.getString();
@@ -127,14 +126,10 @@ public class InventoryManager
 	{
 	 
 		data = mapper.readValue(
-				new File(
-						"/home/admin1/Desktop/JavaProgram/Programs/src/InventoryManager.json"),
-				new TypeReference<LinkedList<InventoryFactory>>() {
-				});
+				new File("/home/admin1/Desktop/JavaProgram/Programs/src/InventoryManager.json"),
+				new TypeReference<LinkedList<InventoryFactory>>() {});
 		data.add(fact); 
 		mapper.writeValue(
-				new File(
-						"/home/admin1/Desktop/JavaProgram/Programs/src/InventoryManager.json"),
-				data);
+				new File("/home/admin1/Desktop/JavaProgram/Programs/src/InventoryManager.json"),data);
 	}
 }

@@ -54,20 +54,20 @@ public class AddressBookMethods
 		String zip = scanner.nextLine();
 		System.out.println("Enter phone number :");
 		String phoneNum = scanner.nextLine();
-		AddressBookPojo pojo = new AddressBookPojo(name,lastName,address,city,state,zip,phoneNum);
-		createJsonObj(pojo , addressArray);
+		AddressBookProj proj= new AddressBookProj(name,lastName,address,city,state,zip,phoneNum);
+		createJsonObj(proj , addressArray);
 	}
 	@SuppressWarnings("unchecked")
-	public void createJsonObj(AddressBookPojo pojo ,JSONArray addressArray) throws Exception
+	public void createJsonObj(AddressBookProj proj ,JSONArray addressArray) throws Exception
 	{
 		JSONObject addObj = new JSONObject();
-		addObj.put("First Name", pojo.getFirstName());
-		addObj.put("Last Name", pojo.getLastName());
-		addObj.put("Address", pojo.getAddress());
-		addObj.put("City", pojo.getCity());
-		addObj.put("State", pojo.getState());
-		addObj.put("Zip Code", pojo.getZipCode());
-		addObj.put("Phone no.", pojo.getPhnno());
+		addObj.put("First Name", proj.getFirstName());
+		addObj.put("Last Name", proj.getLastName());
+		addObj.put("Address", proj.getAddress());
+		addObj.put("City", proj.getCity());
+		addObj.put("State", proj.getState());
+		addObj.put("Zip Code", proj.getZipCode());
+		addObj.put("Phone no.", proj.getPhnno());
 		addressArray.add(addObj);
 		addrArrayContainObj.put("AddressBook", addressArray);
 		System.out.println(addrArrayContainObj.toString());

@@ -1,21 +1,21 @@
 /**
- * a pojo of the attributes of the company
+ * a proj of the attributes of the company
  * such as stock name stock symbol,number of share,share price
  *  
  */
 package com.bridgelabz.oopsprograms.commercialdataprocessing;
-public class CommercialCompanyPojo 
+public class CommercialCompanyProj 
    {
 		        private String stockName;
 		        private String stockSymbol;
 	        	private String noOFShare;
 		        private String sharePrice;
 	
-				public CommercialCompanyPojo()
+				public CommercialCompanyProj()
 				{		
 				}
 			
-				public CommercialCompanyPojo(String stockName, String stockSymbol, String noOFShare, String sharePrice)
+				public CommercialCompanyProj(String stockName, String stockSymbol, String noOFShare, String sharePrice)
 				{
 					super();
 					this.stockName = stockName;

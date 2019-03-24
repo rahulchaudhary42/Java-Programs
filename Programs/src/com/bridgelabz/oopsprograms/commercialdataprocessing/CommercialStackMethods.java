@@ -15,9 +15,9 @@ import org.json.simple.parser.JSONParser;
 public class CommercialStackMethods
 {	
 	Scanner sc= new Scanner(System.in);
-	private String companyFilePath = "/home/bridgelabz/Desktop/Aayush/Company.json";
-	private String userFilePath = "/home/bridgelabz/Desktop/Aayush/UserStock.json";
-	private CommercialCompanyPojo companyPojo = new CommercialCompanyPojo();
+	private String companyFilePath = "/home/admin1/Desktop/JavaProgram/Programs/src/com/bridgelabz/oopsprograms/commercialdataprocessing/Company.json";
+	private String userFilePath = "/home/admin1/Desktop/JavaProgram/Programs/src/com/bridgelabz/oopsprograms/commercialdataprocessing/UserStock.json";
+	private CommercialCompanyProj companyPojo = new CommercialCompanyProj();
 	CommercialStackLLMethods stack ;
 	CommercialQueueMethods queue;	
 	public void addDetails() throws Exception
@@ -61,7 +61,7 @@ public class CommercialStackMethods
 		createCompanyJsonObj(companyPojo ,file);
 	}
 	@SuppressWarnings("unchecked")
-	public void createCompanyJsonObj(CommercialCompanyPojo companyPojo , File file) throws Exception
+	public void createCompanyJsonObj(CommercialCompanyProj companyPojo , File file) throws Exception
 	{
 		JSONParser parser = new JSONParser();		 
 		JSONObject jsonObj = (JSONObject)parser.parse(new FileReader(file));
@@ -86,7 +86,7 @@ public class CommercialStackMethods
 	}	
 	public void addUser() throws Exception
 	{
-		CommercialUserPojo userPojo = new CommercialUserPojo();
+		CommercialUserProj userPojo = new CommercialUserProj();
 		File file = new File(userFilePath);
 		System.out.println("Enter User name : ");
 		String userName = sc.next();
@@ -102,7 +102,7 @@ public class CommercialStackMethods
 		createUserJsonObj(userPojo ,file);
 	}	
 	@SuppressWarnings("unchecked")
-	public void createUserJsonObj(CommercialUserPojo userPojo , File file) throws Exception
+	public void createUserJsonObj(CommercialUserProj userPojo , File file) throws Exception
 	{
 		JSONParser parser = new JSONParser();		 
 		JSONObject jsonObj = (JSONObject)parser.parse(new FileReader(file));

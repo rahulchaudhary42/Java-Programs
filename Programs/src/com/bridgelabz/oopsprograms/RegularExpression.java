@@ -16,8 +16,8 @@ public class RegularExpression
 	public static void regexExpression(String fullName, String mobile, String firstName) 
 	{
 		String Message = "Hello <<name>>, We have your full name "
-				+ "as <<full name>> in our system. \nYour contact number is +91­xxxxxxxxxx. \nPlease,let us "
-				+ "know in case of any clarification.\n\t\t\t Thank you!!!\n\t\t\t BridgeLabz 01/01/2016. ";
+				+ "as <<full name>> in our system. \n\t\tYour contact number is +91­xxxxxxxxxx. \n\tPlease,let us "
+				+ "know in case of any clarification.\n\t\t\t Thank you!!!\n\t\t\tBridgeLabz 01/01/2016. ";
 		// create regex
 		String regexName = "<<name>>";
 		String regexFname = "<<full name>>";

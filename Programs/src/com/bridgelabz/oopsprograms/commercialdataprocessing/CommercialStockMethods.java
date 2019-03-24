@@ -13,7 +13,7 @@ public class CommercialStockMethods
 	Scanner sc= new Scanner(System.in);
 	private String companyFilePath = "/home/admin1/Desktop/JavaProgram/Programs/src/com/bridgelabz/oopsprograms/commercialdataprocessing/Company.json";
 	private String userFilePath = "/home/admin1/Desktop/JavaProgram/Programs/src/com/bridgelabz/oopsprograms/commercialdataprocessing/UserStock.json";
-	private CommercialCompanyPojo companyPojo = new CommercialCompanyPojo();
+	private CommercialCompanyProj companyProj = new CommercialCompanyProj();
 	
 	public void addDetails() throws Exception
 	{
@@ -41,33 +41,33 @@ public class CommercialStockMethods
 		File file = new File(companyFilePath);
 		System.out.println("Enter Stock name : ");
 		String stockName = sc.next();
-		companyPojo.setStockName(stockName);
+		companyProj.setStockName(stockName);
 		
 		System.out.println("Enter stock symbol : ");
 		String stockSymbol = sc.next();
-		companyPojo.setStockSymbol(stockSymbol);
+		companyProj.setStockSymbol(stockSymbol);
 		
 		System.out.println("Enter no. of share : ");
 		String noOfShare = sc.next();
-		companyPojo.setNoOFShare(noOfShare);
+		companyProj.setNoOFShare(noOfShare);
 		
 		System.out.println("Enter share Price : ");
 		String sharePrice = sc.next();
-		companyPojo.setSharePrice(sharePrice);		
-		createCompanyJsonObj(companyPojo ,file);
+		companyProj.setSharePrice(sharePrice);		
+		createCompanyJsonObj(companyProj ,file);
 	}
 	
 	@SuppressWarnings("unchecked")
-	public void createCompanyJsonObj(CommercialCompanyPojo companyPojo , File file) throws Exception
+	public void createCompanyJsonObj(CommercialCompanyProj companyProj , File file) throws Exception
 	{
 		JSONParser parser = new JSONParser();		 
 		JSONObject jsonObj = (JSONObject)parser.parse(new FileReader(file));
 		JSONArray jsonArray =(JSONArray)jsonObj.get("StockDetails");
 		JSONObject simple = new JSONObject();
-		simple.put("StockName",companyPojo.getStockName());
-		simple.put("StockSymbol", companyPojo.getStockSymbol());
-		simple.put("NoOfShare", companyPojo.getNoOFShare());
-		simple.put("SharePrice", companyPojo.getSharePrice());
+		simple.put("StockName",companyProj.getStockName());
+		simple.put("StockSymbol", companyProj.getStockSymbol());
+		simple.put("NoOfShare", companyProj.getNoOFShare());
+		simple.put("SharePrice", companyProj.getSharePrice());
 		jsonArray.add(simple);
 		jsonObj.put("StockDetails", jsonArray);
 		System.out.println(jsonObj);
@@ -85,32 +85,32 @@ public class CommercialStockMethods
 	
 	public void addUser() throws Exception
 	{
-		CommercialUserPojo userPojo = new CommercialUserPojo();
+		CommercialUserProj userProj = new CommercialUserProj();
 		File file = new File(userFilePath);
 		System.out.println("Enter User name : ");
 		String userName = sc.next();
-		userPojo.setUserName(userName);
+		userProj.setUserName(userName);
 				
 		System.out.println("Enter no. of share : ");
 		String noOfShare = sc.next();
-		userPojo.setNoOfShares(noOfShare);
+		userProj.setNoOfShares(noOfShare);
 		
 		System.out.println("Enter share price : ");
 		String sharePrice = sc.next();
-		userPojo.setPrice(sharePrice);					
-		createUserJsonObj(userPojo ,file);
+		userProj.setPrice(sharePrice);					
+		createUserJsonObj(userProj ,file);
 	}	
 	
 	@SuppressWarnings("unchecked")
-	public void createUserJsonObj(CommercialUserPojo userPojo , File file) throws Exception
+	public void createUserJsonObj(CommercialUserProj userProj , File file) throws Exception
 	{
 		JSONParser parser = new JSONParser();		 
 		JSONObject jsonObj = (JSONObject)parser.parse(new FileReader(file));
 		JSONArray jsonArray =(JSONArray)jsonObj.get("UserDetails");
 		JSONObject simple = new JSONObject();
-		simple.put("UserName",userPojo.getUserName());
-		simple.put("NoOfShare", userPojo.getNoOfShares());
-		simple.put("SharePrice", userPojo.getPrice());
+		simple.put("UserName",userProj.getUserName());
+		simple.put("NoOfShare", userProj.getNoOfShares());
+		simple.put("SharePrice", userProj.getPrice());
 		jsonArray.add(simple);
 		jsonObj.put("UserDetails", jsonArray);
 		System.out.println(jsonObj);
