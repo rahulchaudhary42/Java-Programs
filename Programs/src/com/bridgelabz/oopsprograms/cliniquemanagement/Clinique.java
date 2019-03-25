@@ -19,8 +19,9 @@ public class Clinique
 		int choice = 0;
 		do 
 		{
+			System.out.println("\tClinique Management Programme.");
 			System.out.println(
-					"\n1. Add Doctor or Patient or fix an Appointment\n2. Search doctor\n3. Display details\n4. Close");
+					"\n1. Add Doctor or Patient or fix an Appointment or Delete\n2. Search doctor\n3. Display details\n4. Close");
 			choice = Util.getInt();
 			switch (choice) 
 			{
@@ -37,7 +38,7 @@ public class Clinique
 				System.out.println("Exiting");
 				break;
 			default:
-				System.out.println("Invalid Entry");
+				System.err.println("Invalid Entry...");
 			}
 		} 
 		while (choice != 4);

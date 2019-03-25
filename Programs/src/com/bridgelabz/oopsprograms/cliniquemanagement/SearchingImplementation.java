@@ -1,16 +1,13 @@
 package com.bridgelabz.oopsprograms.cliniquemanagement;
- 
 import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 import org.codehaus.jackson.map.ObjectMapper;
 import org.codehaus.jackson.type.TypeReference;
-
 import com.bridgelabz.utility.Util;
- 
-
-public class SearchingImplementation implements Searching {
+public class SearchingImplementation implements Searching 
+{
 //to store data in arraylist
 	static ObjectMapper mapper = new ObjectMapper();
 	List<Patients> personlist = new ArrayList<>();
@@ -32,8 +29,10 @@ public class SearchingImplementation implements Searching {
 					new TypeReference<List<Appointment>>() {
 					});
 
-		} catch (Exception e) {
-
+		} 
+		catch (Exception e) 
+		{
+            System.out.println(e);
 		}
 	}
 	String name;
@@ -41,9 +40,11 @@ public class SearchingImplementation implements Searching {
 	int id;
 
 	@Override
-	public void operation() {
+	public void operation() 
+	{
 		int Answer = 0;
-		do {
+		do
+		{
 			System.out.println("\n1. Search Doctor by Name");
 			System.out.println("2. Search Doctor by id");
 			System.out.println("3. Search Doctor by Specialization");
@@ -53,7 +54,8 @@ public class SearchingImplementation implements Searching {
 			System.out.println("7. Search Patients by Phone");
 			System.out.println("8. Exit");
 			Answer = Util.getInt();
-			switch (Answer) {
+			switch (Answer)
+			{
 			case 1:
 				searchByDoctorName(); //search doctor by name
 				break;
@@ -83,19 +85,22 @@ public class SearchingImplementation implements Searching {
 			default:
 				System.out.println("Invalid entry");
 			}
-		} while (Answer != 8);
+		} 
+		while (Answer != 8);
 	}
 
 	@Override
 	//patient by name
-	public void searchByPatientName() {
+	public void searchByPatientName() 
+	{
 		// TODO Auto-generated method stub
 		System.out.println("Enter Name");
 		name = Util.getString();
 		List<Patients> listtemp = (List<Patients>) personlist.stream().filter(i -> i.getName().equals(name))
 				.collect(Collectors.toList());
 		System.out.println("[Name,id,age,phone]");
-		for (int i = 0; i < listtemp.size(); i++) {
+		for (int i = 0; i < listtemp.size(); i++) 
+		{
 			System.out.println(listtemp.get(i).toString() + "  ");
 		}
 
@@ -103,15 +108,19 @@ public class SearchingImplementation implements Searching {
 
 	@Override
 	//patient by id
-	public void serarchByPatientid() {
+	public void serarchByPatientid() 
+	{
 		// TODO Auto-generated method stub
 		System.out.println("Enter id");
 		id = Util.getInt();
-		try {
+		try 
+		{
 			List<Patients> listtemp = personlist.stream().filter(i -> i.getId() == id).collect(Collectors.toList());
 			System.out.println("[Name,id,age,phone]");
 			System.out.println(listtemp.get(0).toString());
-		} catch (Exception e) {
+		} 
+		catch (Exception e) 
+		{
 			System.out.println("Unknown Id");
 		}
 
@@ -119,21 +128,26 @@ public class SearchingImplementation implements Searching {
 
 	@Override
 	//search patient by phone number
-	public void searchByPatientphone() {
+	public void searchByPatientphone()
+	{
 		// TODO Auto-generated method stub
 		System.out.println("Enter phone");
 		phone = Util.getString();
-		try {
+		try 
+		{
 			Patients obj = (Patients) (Object) personlist.stream().filter(i -> i.getPhone().equals(phone)).findFirst();
 			System.out.println(obj.toString());
-		} catch (Exception e) {
+		} 
+		catch (Exception e) 
+		{
 			System.out.println("Unknown Phone Number");
 		}
 	}
 
 	@Override
 	//search doctor by name
-	public void searchByDoctorName() {
+	public void searchByDoctorName() 
+	{
 		// TODO Auto-generated method stub
 
 		System.out.println("Enter Name");
@@ -141,7 +155,8 @@ public class SearchingImplementation implements Searching {
 		List<Doctor> listtemp = (List<Doctor>) doctorlist.stream().filter(i -> i.getName().equals(name))
 				.collect(Collectors.toList());
 		System.out.println("[Name,id,Availability,Specialist]");
-		for (int i = 0; i < listtemp.size(); i++) {
+		for (int i = 0; i < listtemp.size(); i++) 
+		{
 			System.out.println(listtemp.get(i).toString() + "\t\t");
 		}
 
@@ -149,29 +164,35 @@ public class SearchingImplementation implements Searching {
 
 	@Override
 	//search doctor by id
-	public void searchByDoctorId() {
+	public void searchByDoctorId() 
+	{
 		// TODO Auto-generated method stub
 		System.out.println("Enter id");
 		id = Util.getInt();
-		try {
+		try
+		{
 			List<Doctor> listtemp = doctorlist.stream().filter(i -> i.getId() == id).collect(Collectors.toList());
 			System.out.println("Name     id      Availibility      Specialist");
 			System.out.println(listtemp.get(0).toString());
-		} catch (Exception e) {
+		} 
+		catch (Exception e) 
+		{
 			System.out.println("Unknown Id");
 		}
 	}
 
 	@Override
 	//search doctor by specialization
-	public void searchByDoctorSpecialization() {
+	public void searchByDoctorSpecialization() 
+	{
 		// TODO Auto-generated method stub
 		System.out.println("Enter Specialization");
 		name = Util.getString();
 		List<Doctor> listtemp = (List<Doctor>) doctorlist.stream().filter(i -> i.getSpecialization().equals(name))
 				.collect(Collectors.toList());
 		System.out.println("Name     id      Availability      Specialist");
-		for (int i = 0; i < listtemp.size(); i++) {
+		for (int i = 0; i < listtemp.size(); i++) 
+		{
 			System.out.println(listtemp.get(i).toString());
 		}
 
@@ -179,14 +200,16 @@ public class SearchingImplementation implements Searching {
 
 	@Override
 	//search doctor by availability
-	public void searchByDoctorAvailability() {
+	public void searchByDoctorAvailability() 
+	{
 		// TODO Auto-generated method stub
 		System.out.println("Enter Availability");
 		name = Util.getString();
 		List<Doctor> listtemp = (List<Doctor>) doctorlist.stream().filter(i -> i.getAvailability().equals(name))
 				.collect(Collectors.toList());
 		System.out.println("Name     id      Availability      Specialist");
-		for (int i = 0; i < listtemp.size(); i++) {
+		for (int i = 0; i < listtemp.size(); i++)
+		{
 			System.out.println(listtemp.get(i).toString());
 		}
 	}

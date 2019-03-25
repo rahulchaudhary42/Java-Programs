@@ -92,7 +92,7 @@ public class AddressBookMethods
 	}
 	public void editInfo() throws Exception
 	{
-		System.out.println("Enter the name of the person whose data you want to edit : ");
+		System.out.println("Enter the name of the person : ");
 		String personName = scanner.next();
 		boolean isAvailable = checkDetails(personName);
 		if(isAvailable)
@@ -108,7 +108,7 @@ public class AddressBookMethods
 		}
 		else
 		{
-			System.out.println("Person is found in database..!!!\nDo u want to enter once again :(Y/N)");
+			System.err.println("Person is found in database..!!!\nDo u want to enter once again :(Y/N)");
 			char ch=scanner.next().charAt(0);
 			if(ch=='Y'||ch=='y')
 			{
@@ -247,7 +247,7 @@ public class AddressBookMethods
 		}
 		else
 		{
-			System.out.println("Data not found...\nDo u want to enter another data(Y/N)");
+			System.err.println("Data not found...\nDo u want to enter another data(Y/N)");
 			char ch = scanner.next().charAt(0);
 			if(ch=='Y'||ch=='y')
 				removeData();

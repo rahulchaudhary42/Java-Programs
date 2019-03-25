@@ -31,7 +31,7 @@ public class DoctorPatientImplementation implements DoctorAndPatientData
 		} 
 		catch (Exception e)
 		{
-
+            System.out.println(e);
 		}
 	}
 
@@ -65,26 +65,23 @@ public class DoctorPatientImplementation implements DoctorAndPatientData
 			switch (Answer)
 			{
 			case 1:
-				//to add doctor
 				addDoctor();
-				//save data
 				save();
 				break;
 			case 2:
-				//delete doctor
 				deleteDoctor();
-				save();//save data
+				save(); 
 				break;
 			case 3:
-				addPatient(); //add patient
+				addPatient(); 
 				save();
 				break;
 			case 4:
-				deletePatient(); //delete patient
+				deletePatient();  
 				save();
 				break;
 			case 5:
-				fixAppointment(); //fix appointment
+				fixAppointment();  
 				save();
 				break;
 			case 6:
@@ -104,7 +101,7 @@ public class DoctorPatientImplementation implements DoctorAndPatientData
 	{
 		System.out.println("Enter Name");
 		name = Util.getString();
-		System.out.println("Enter Specalization");
+		System.out.println("Enter Specialization");
 		specialization = Util.getString();
 		System.out.println("Enter Availability(AM/PM/BOTH)");
 		availability = Util.getString();

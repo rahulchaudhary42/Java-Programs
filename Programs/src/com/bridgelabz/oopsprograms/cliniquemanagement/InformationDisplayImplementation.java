@@ -60,7 +60,8 @@ public class InformationDisplayImplementation implements InformationDisplay {
 
 	@Override
 	// to print patient data
-	public void patientInformation() {
+	public void patientInformation()
+	{
 		// TODO Auto-generated method stub
 		// String spaces=" ";
 		System.out.println("Name     id \t Phone  \tage");
@@ -72,7 +73,8 @@ public class InformationDisplayImplementation implements InformationDisplay {
 
 	@Override
 	// to print doctors data
-	public void doctorInformation() {
+	public void doctorInformation()
+	{
 		// TODO Auto-generated method stub
 		System.out.println("Name     id  availability  specialization");
 		doctorlist.stream().forEach(i -> {

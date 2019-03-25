@@ -1,3 +1,11 @@
+/**********************************************************************************
+	 * Purpose:   Create Object Oriented Analysis and Design of a simple Address Book Problem.
+     *
+	 * @author Rahul Chaudhary
+	 * @version 1.2 
+	 * @since  23-03-2019
+	 *
+	 ******************************************************************************/
 package com.bridgelabz.oopsprograms.addressbook;
 import java.util.Scanner;
 public class AddressBook 
@@ -31,8 +39,10 @@ public class AddressBook
 			default :
 				break;				
 			}
+			System.err.println("Invalid argument...");
 			System.out.println("Do u want to continue Y/N : ");
 			ch =sc.next().charAt(0);
-		}while(ch=='Y'||ch=='y');
 		}
+		while(ch=='Y'||ch=='y');
+	}
 }
