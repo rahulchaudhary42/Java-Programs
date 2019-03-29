@@ -158,12 +158,12 @@ public class AddressBookMethods
 		switch(ch)
 		{
 		case 1:
+			System.out.println("Sorted by Name : ");
 			sortByName();
-			System.out.println("Sorted by Name");
 			break;
 		case 2:
+			System.out.println("Sorted By zip code : ");
 			sortByZip();
-			System.out.println("Sorted By zip code");
 			break;			
 		default:
 			System.out.println("Invalid choice..!!!");
@@ -179,7 +179,7 @@ public class AddressBookMethods
 		JSONObject obj1=null ;
 		JSONObject obj2= null;
 		JSONObject temp = null;
-		for(int i = 0 ; i < array.size()-1;i++)
+		for(int i = 0 ; i < array.size();i++)
 		{
 			for(int j=0;j<array.size()-1;j++)
 			{
@@ -201,6 +201,8 @@ public class AddressBookMethods
 		}
 		addrArrayContainObj.put("AddressBook",array);
 		writeIntoFile(addrArrayContainObj);
+		System.out.println(array);
+		System.out.println();
 	}
 	@SuppressWarnings("unchecked")
 	public void sortByZip() throws Exception
@@ -232,6 +234,8 @@ public class AddressBookMethods
 		}
 		addrArrayContainObj.put("AddressBook",array);
 		writeIntoFile(addrArrayContainObj);
+		System.out.println(array);
+		System.out.println();
 	}
 	public void removeData() throws Exception
 	{
@@ -293,4 +297,5 @@ public class AddressBookMethods
 		}
 		writeIntoFile(addrArrayContainObj);
 	}
+	 
 }

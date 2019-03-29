@@ -62,7 +62,6 @@ public class InventoryManager
 			default:
 				System.err.println("Invalid Entry ...");
 			}
-
 		} 
 		while (Option != 4);
       
@@ -87,7 +86,8 @@ public class InventoryManager
 				data1.remove(i);  
 			}
 
-			else if (i == data1.size()) {
+			else if (i == data1.size()) 
+			{
 				System.out.println("Invalid ");
 			}
 		 

@@ -37,9 +37,10 @@ public class AddressBook
 				book.removeData();
 				break;
 			default :
+				System.err.println("Invalid argument...");
 				break;				
 			}
-			System.err.println("Invalid argument...");
+		
 			System.out.println("Do u want to continue Y/N : ");
 			ch =sc.next().charAt(0);
 		}
